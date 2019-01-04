@@ -7,7 +7,7 @@ ENV CADVISOR_VERSION ${APP_VERSION}
 
 RUN apt-get update && apt-get install -y git dmsetup && apt-get clean
 
-RUN git clone --branch $CADVISOR_VERSION https://github.com/google/cadvisor.git /go/src/github.com/google/cadvisor
+RUN git clone --branch $(CADVISOR_VERSION) https://github.com/google/cadvisor.git /go/src/github.com/google/cadvisor
 
 WORKDIR /go/src/github.com/google/cadvisor
 
