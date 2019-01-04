@@ -4,7 +4,7 @@ FROM arm32v7/golang as builder
 MAINTAINER Ondřej Záruba <info@zaruba-ondrej.cz> (https://zaruba-ondrej.cz)
 
 ARG APP_VERSION
-ENV CADVISOR_VERSION release_${APP_VERSION}
+ENV CADVISOR_VERSION ${APP_VERSION}
 
 RUN apt-get update && apt-get install -y git dmsetup && apt-get clean
 
